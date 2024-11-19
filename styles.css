@@ -140,3 +140,119 @@ footer {
         opacity: 1;
     }
 }
+.social-media-icons a {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    background: #f0f0f0;
+    font-size: 24px;
+    color: #333;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-media-icons a:hover {
+    background: #007BFF;
+    color: #fff;
+}
+
+.social-media-icons a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-media-icons a:hover::after {
+    transform: translate(-50%, -50%) scale(20);
+    opacity: 0;
+}
+.social-media-icons a {
+    animation: colorChange 3s infinite;
+}
+
+@keyframes colorChange {
+    0% { color: #007BFF; }
+    33% { color: #FF5722; }
+    66% { color: #4CAF50; }
+    100% { color: #007BFF; }
+}
+.dynamic-title {
+    display: inline-block;
+    font-size: 2.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #fff;
+    animation: typing 3s steps(30, end), blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+}
+.feature {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+html {
+    scroll-behavior: smooth;
+}
+.button {
+    position: relative;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff7eb3, #ff758c);
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+.button:hover {
+    box-shadow: 0 0 20px #ff7eb3, 0 0 30px #ff758c;
+}
+.landing {
+    background: url('.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+}
+.social-media-icons a {
+    transition: 0.3s;
+    color: white;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+}
+
+.social-media-icons a:hover {
+    text-shadow: 0 0 20px #ff7eb3, 0 0 30px #ff758c;
+    transform: scale(1.2);
+}
+
+
+
+
+
